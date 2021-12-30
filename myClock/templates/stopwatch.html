@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block stopwatch %}active{% endblock stopwatch %}
+<!DOCTYPE html>
+<html lang="en">
+{% block head %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'stopwatch.css' %}">
+    <script src="{% static 'stopwatch.js' %}"></script>
+    <title>Stopwatch</title>
+{% endblock head %}
+{% block body %}
+    <div id="clock">
+        <div id="clockcontainer" class="container-fluid bg-dark d-flex justify-content-center align-items-center">
+            <div id="time1" class="bg-dark">00:00:00</div>
+        </div>
+        <div id="container" class="container-fluid bg-dark">
+            <div id="s">
+                <button onclick="myFunc1()">Start</button>
+                <button onclick="myFunc4()">Stop</button>
+            </div>
+            <button onclick="myFunc2()">Lap (5)</button>
+            <div id="lap1" class="lap">lap</div>
+            <div id="lap2" class="lap">lap</div>
+            <div id="lap3" class="lap">lap</div>
+            <div id="lap4" class="lap">lap</div>
+            <div id="lap5" class="lap">lap</div>
+            <button onclick="myFunc3()">Reset</button>
+        </div>
+    </div>
+{% endblock body %}
+</html>

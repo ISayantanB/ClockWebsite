@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block world %}active{% endblock world %}
+{% block head %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'worldclock.css' %}">
+    <script src="{% static 'worldclock.js' %}"></script>
+    <title>World Clock</title>
+{% endblock head %}
+{% block body %}
+    <div id="clockcontainer">
+        <div id="time"></div>
+        <div id="select">
+            <select id="timezone" value="Timezone" onclick="Add()">
+                <option value="Timezone" selected>Select Timezone</option>
+            </select>
+            <button onclick="Remove()">Show
+        </div>
+    </div>
+{% endblock body %}

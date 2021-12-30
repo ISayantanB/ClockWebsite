@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block head %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Clock</title>
+{% endblock head %}
+{% block body %}
+<div class="container-fluid text-center fs-1 p-5"><b>Time is Money</b></div>
+<div class="card-group p-10">
+    <div class="card bg-dark text-light mx-4 my-2">
+      <img src="../static/analogClock.jpg" class="card-img-top" style="height: 100px; width: 100px" alt="Image">
+      <div class="card-body">
+        <h3 class="card-title">Analog Clock</h3>
+        <a href="/analogClock">Go To Page</a>
+      </div>
+    </div>
+    <div class="card bg-dark text-light mx-4 my-2">
+      <img src="../static/digitalClock.jpg" class="card-img-top" style="height: 100px; width: 100px" alt="Image">
+      <div class="card-body">
+        <h3 class="card-title">Digital Clock</h3>
+        <a href="/digitalClock">Go To Page</a>
+      </div>
+    </div>
+    <div class="card bg-dark text-light mx-4 my-2">
+      <img src="../static/alarmClock.jpg" class="card-img-top" style="height: 100px; width: 100px" alt="Image">
+      <div class="card-body">
+        <h3 class="card-title">Alarm Clock</h3>
+        <a href="/alarmClock">Go To Page</a>
+      </div>
+    </div>
+</div>
+<div class="card-group p-10">
+    <div class="card bg-dark text-light mx-4 my-2">
+      <img src="../static/stopwatchClock.jpg" class="card-img-top" style="height: 100px; width: 100px" alt="Image">
+      <div class="card-body">
+        <h3 class="card-title">Stopwatch</h3>
+        <a href="/stopwatchClock">Go To Page</a>
+      </div>
+    </div>
+    <div class="card bg-dark text-light mx-4 my-2">
+      <img src="../static/timerClock.jpg" class="card-img-top" style="height: 100px; width: 100px" alt="Image">
+      <div class="card-body">
+        <h3 class="card-title">Timer</h3>
+        <a href="/timerClock">Go To Page</a>
+      </div>
+    </div>
+    <div class="card bg-dark text-light mx-4 my-2">
+      <img src="../static/worldClock.jpg" class="card-img-top" style="height: 100px; width: 100px" alt="Image">
+      <div class="card-body">
+        <h3 class="card-title">World Clock</h3>
+        <a href="/worldClock">Go To Page</a>
+      </div>
+    </div>
+</div>
+{% endblock body %}

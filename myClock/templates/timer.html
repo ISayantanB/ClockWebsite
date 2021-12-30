@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block timer %}active{% endblock timer %}
+<!DOCTYPE html>
+<html lang="en">
+{% block head %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'timer.css' %}">
+    <script src="{% static 'timer.js' %}"></script>
+    <title>Timer</title>
+{% endblock head %}
+{% block body %}
+    <div id="clockcontainer" class="container-fluid">
+        <input type="number" max="24" min="0" id="hour" placeholder="Hr">
+        :
+        <input type="number" max="60" min="0" id="minute" placeholder="Min">
+        :
+        <input type="number" max="60" min="0" id="second" placeholder="Sec">
+    </div>
+    <div id="container">
+        <button onclick="myFunc1()">Start</button>
+        <button onclick="myFunc2()">Reset</button>
+    </div>
+{% endblock body %}
+</html>

@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block alarm %}active{% endblock alarm %}
+<!DOCTYPE html>
+<html lang="en">
+{% block head %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'alarm.css' %}">
+    <script src="{% static 'alarm.js' %}"></script>
+    <title>Alarm</title>
+{% endblock head %}
+{% block body %}
+    <div>
+        <audio id="audio">
+            <source src="../static/alarm.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <div id="alarmcontainer" class="container-fluid bg-dark">
+        <div id="clock" class="container bg-dark d-flex justify-content-center align-items-center"></div>
+        <div id="alarmset" class="container-fluid bg-dark text-center ">
+            <input type="datetime-local" id="datetime"></input>
+            <div id="buttons">
+                <button onclick="alarmFunc()">Set Alarm</button>
+                <button onclick="Reset()">Stop/Reset</button>
+            </div>
+        </div>
+    </div>
+{% endblock body %}
+</html>
